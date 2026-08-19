@@ -11,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.siteUrl),
   title: siteConfig.seo.title,
   description: siteConfig.seo.description,
   robots: {
@@ -23,11 +24,13 @@ export const metadata: Metadata = {
     url: siteConfig.siteUrl,
     siteName: siteConfig.siteName,
     type: "website",
+    images: [{ url: "/profile.png", width: 800, height: 800 }],
   },
   twitter: {
     card: "summary",
     title: siteConfig.seo.title,
     description: siteConfig.seo.description,
+    images: ["/profile.png"],
   },
 };
 

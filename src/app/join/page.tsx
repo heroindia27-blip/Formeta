@@ -5,36 +5,36 @@ import { DebugPanel } from "@/components/DebugPanel";
 
 export default function JoinPage() {
   return (
-    <main className="flex-1 flex flex-col items-center justify-center px-6 py-12 sm:py-20">
+    <main className="flex-1 flex flex-col items-center justify-center px-5 py-10 sm:px-6 sm:py-20">
       <div className="hero-glow flex flex-col items-center text-center max-w-lg w-full">
-        <div className="mb-6 sm:mb-8">
-          <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-2 ring-[#2AABEE]/30 ring-offset-4 ring-offset-[#0a0a0f]">
+        <div className="mb-5 sm:mb-8">
+          <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-2 ring-[#2AABEE]/30 ring-offset-4 ring-offset-[#0a0a0f]">
             <Image
               src={siteConfig.hero.image}
               alt={siteConfig.siteName}
               fill
               className="object-cover object-top"
               priority
-              sizes="(max-width: 640px) 112px, 128px"
+              sizes="(max-width: 640px) 96px, 128px"
             />
           </div>
         </div>
 
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
+        <h1 className="text-lg sm:text-2xl md:text-3xl font-bold tracking-tight text-white leading-snug px-2">
           {siteConfig.hero.headline}
         </h1>
 
-        <p className="mt-4 sm:mt-6 text-base sm:text-lg text-muted leading-relaxed max-w-md">
+        <p className="mt-3 sm:mt-5 text-sm sm:text-base text-muted leading-relaxed max-w-sm sm:max-w-md">
           {siteConfig.hero.description}
         </p>
 
-        <div className="mt-8 sm:mt-10 w-full flex justify-center">
+        <div className="mt-6 sm:mt-10 w-full flex justify-center">
           <TelegramCTA />
         </div>
 
-        <div className="mt-6 flex items-center gap-2 text-sm text-muted">
+        <div className="mt-5 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-muted">
           {siteConfig.trustSignals.map((signal, i) => (
-            <span key={signal} className="flex items-center gap-2">
+            <span key={signal} className="flex items-center gap-1.5 sm:gap-2">
               {i > 0 && (
                 <span
                   className="w-1 h-1 rounded-full bg-muted/40"
