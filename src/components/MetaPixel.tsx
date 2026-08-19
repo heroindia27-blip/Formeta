@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import { siteConfig } from "@/lib/config";
 import { useEffect } from "react";
 import { captureAttribution } from "@/lib/attribution";
@@ -14,9 +13,7 @@ export function MetaPixel() {
 
   return (
     <>
-      <Script
-        id="meta-pixel"
-        strategy="afterInteractive"
+      <script
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
