@@ -10,7 +10,7 @@ export const siteConfig = {
   hero: {
     headline: "⚜️💎 𝐑𝐈𝐒𝐇𝐈𝐓𝐀 𝐗𝐈⚜️𝐓𝐎𝐒𝐒 𝐐𝐔𝐄𝐄𝐍⚜️💎",
     description:
-      "Join the exclusive Telegram channel for the latest updates, premium content, and more — delivered directly to you.",
+      "Exclusive toss predictions with proven accuracy — join for free today.",
     image: "/profile.png",
   },
 
