@@ -21,8 +21,20 @@ export const siteConfig = {
   trustSignals: ["Free", "Instant Access", "Exclusive Content"],
 
   seo: {
-    title: "⚜️💎 RISHITA XI ⚜️ TOSS QUEEN ⚜️💎 — Join on Telegram",
+    title: "Rishita Xi | Toss Queen | Accurate Cricket Toss Predictions",
     description:
-      "Join the exclusive Telegram channel of Rishita Xi — Toss Queen. Get the latest updates, premium content, and more.",
+      "Join the official Telegram channel of Rishita Xi (Toss Queen). Get 100% accurate cricket toss predictions, match analysis, and premium winning tips for free.",
+    keywords: [
+      "toss queen",
+      "rishita xi",
+      "cricket toss prediction",
+      "toss prediction telegram channel",
+      "accurate toss prediction",
+      "match prediction",
+      "cricket betting tips",
+      "free toss prediction",
+      "toss king",
+      "best telegram channel for cricket predictions"
+    ],
   },
 } as const;

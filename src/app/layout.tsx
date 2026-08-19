@@ -14,9 +14,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: siteConfig.seo.title,
   description: siteConfig.seo.description,
+  keywords: [...siteConfig.seo.keywords],
+  alternates: {
+    canonical: siteConfig.siteUrl,
+  },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     title: siteConfig.seo.title,
@@ -24,13 +35,26 @@ export const metadata: Metadata = {
     url: siteConfig.siteUrl,
     siteName: siteConfig.siteName,
     type: "website",
-    images: [{ url: "/profile.png", width: 800, height: 800 }],
+    images: [{ url: "/profile.png", width: 800, height: 800, alt: "Rishita Xi Toss Queen" }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteConfig.seo.title,
     description: siteConfig.seo.description,
     images: ["/profile.png"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Rishita Xi Toss Queen",
+  url: siteConfig.siteUrl,
+  description: siteConfig.seo.description,
+  author: {
+    "@type": "Person",
+    name: "Rishita Xi",
+    url: siteConfig.telegramUrl,
   },
 };
 
@@ -41,6 +65,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         {children}
         <MetaPixel />
