@@ -1,26 +1,26 @@
+import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 import { TelegramCTA } from "@/components/TelegramCTA";
 import { DebugPanel } from "@/components/DebugPanel";
-import { TelegramIcon } from "@/components/TelegramIcon";
 
 export default function JoinPage() {
   return (
     <main className="flex-1 flex flex-col items-center justify-center px-6 py-12 sm:py-20">
       <div className="hero-glow flex flex-col items-center text-center max-w-lg w-full">
         <div className="mb-6 sm:mb-8">
-          <div
-            className="
-              inline-flex items-center justify-center
-              w-16 h-16 sm:w-20 sm:h-20
-              rounded-2xl
-              bg-[#2AABEE]/10 border border-[#2AABEE]/20
-            "
-          >
-            <TelegramIcon className="w-8 h-8 sm:w-10 sm:h-10 text-[#2AABEE]" />
+          <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-2 ring-[#2AABEE]/30 ring-offset-4 ring-offset-[#0a0a0f]">
+            <Image
+              src={siteConfig.hero.image}
+              alt={siteConfig.siteName}
+              fill
+              className="object-cover object-top"
+              priority
+              sizes="(max-width: 640px) 112px, 128px"
+            />
           </div>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
           {siteConfig.hero.headline}
         </h1>
 

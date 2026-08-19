@@ -5,23 +5,24 @@ export const siteConfig = {
   pixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID || "",
 
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com",
-  siteName: "Telegram Channel",
+  siteName: "⚜️💎 𝐑𝐈𝐒𝐇𝐈𝐓𝐀 𝐗𝐈⚜️𝐓𝐎𝐒𝐒 𝐐𝐔𝐄𝐄𝐍⚜️💎",
 
   hero: {
-    headline: "Join Our Telegram Channel",
+    headline: "⚜️💎 𝐑𝐈𝐒𝐇𝐈𝐓𝐀 𝐗𝐈⚜️𝐓𝐎𝐒𝐒 𝐐𝐔𝐄𝐄𝐍⚜️💎",
     description:
-      "Get the latest updates, exclusive content, useful resources and more — delivered directly on Telegram.",
+      "Join the exclusive Telegram channel for the latest updates, premium content, and more — delivered directly to you.",
+    image: "/profile.png",
   },
 
   cta: {
     text: "Join Telegram",
   },
 
-  trustSignals: ["Free", "Instant Access", "No Spam"],
+  trustSignals: ["Free", "Instant Access", "Exclusive Content"],
 
   seo: {
-    title: "Join Our Telegram Channel",
+    title: "⚜️💎 RISHITA XI ⚜️ TOSS QUEEN ⚜️💎 — Join on Telegram",
     description:
-      "Get the latest updates, exclusive content, and useful resources. Join our Telegram channel for free.",
+      "Join the exclusive Telegram channel of Rishita Xi — Toss Queen. Get the latest updates, premium content, and more.",
   },
 } as const;
