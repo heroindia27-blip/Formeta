@@ -51,6 +51,15 @@ export function trackPageView(): void {
   }
 }
 
+export function trackLead(): void {
+  if (!isFbqAvailable()) return;
+  try {
+    window.fbq("track", "Lead");
+  } catch {
+    // silent
+  }
+}
+
 export function trackTelegramClick(params?: Record<string, string>): void {
   if (!isFbqAvailable()) return;
   try {

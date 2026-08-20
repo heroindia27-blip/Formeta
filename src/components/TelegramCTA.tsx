@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback } from "react";
-import { trackTelegramClick } from "@/lib/pixel";
+import { trackLead, trackTelegramClick } from "@/lib/pixel";
 import { getAttribution } from "@/lib/attribution";
 import { siteConfig } from "@/lib/config";
 import { TelegramIcon } from "./TelegramIcon";
@@ -9,6 +9,7 @@ import { TelegramIcon } from "./TelegramIcon";
 export function TelegramCTA() {
   const handleClick = useCallback(() => {
     try {
+      trackLead();
       const attribution = getAttribution();
       trackTelegramClick({
         ...(attribution.utm_source && { source: attribution.utm_source }),
